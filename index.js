@@ -4,6 +4,7 @@ const app = express()
 const port = process.env.PORT || 8080
 
 app.set('view engine', 'ejs')
+app.set('views', './views')
 
 app.get('/', (req, res) => res.render('index', { code: "NSW01" }))
 app.get('/:code', (req, res) => res.render('index', { code: req.params.code }) )
